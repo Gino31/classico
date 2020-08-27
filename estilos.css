@@ -1,0 +1,246 @@
+:root {
+    --color-sombra: 2px 2px 10px #333131;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background-image: url(capitone.jpg);
+    color: black;
+    /* height: auto; */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+
+.contenedor {
+    width: 100%;
+    height: 50em;
+    display: grid;
+    grid-row-gap: 0.625em;
+    font-size: 1em;
+
+
+
+    grid-template-areas: "header header header"
+        "nav nav nav"
+        "content content widgets"
+        "content content widgets"
+        "footer footer footer ";
+}
+
+.contenedor .header {
+    grid-area: header;
+    /* background: rgba(0, 0, 0, 0.9); */
+    background: linear-gradient(to right, rgba(36, 1, 96, 1.0), rgba(196, 49, 94, 0.4));
+    color: #f8f1f2;
+    padding-top: 5em;
+    margin: 0.3125em 0.625em;
+    text-align: center;
+}
+
+.contenedor .header h1 {}
+
+.contenedor .header h3 {
+    color: #ffffff;
+    margin-bottom: 2.5em;
+}
+
+.contenedor a{
+    margin: 1em;
+}
+
+
+/* MENU */
+.nav {
+    grid-area: nav;
+    height: 2.5em;
+
+    /* ojo los 2 siguientes van juntos */
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    grid-area: nav;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: var(--color-sombra);
+
+}
+
+.nav a:hover {
+    background-color: #c4315e;
+}
+
+
+.nav .txt1 {
+    background: #24015f;
+    color: #ffffff;
+    width: 4.6875em;
+    margin: 0.625em;
+    padding: 0.625em;
+    border-radius: 0.3125em;
+    box-shadow: var(--color-sombra);
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.nav .txt2 {
+    background: #24015f;
+    color: #ffffff;
+    width: 6em;
+    margin: 0.625em;
+    padding: 0.625em;
+    border-radius: 5px;
+    box-shadow: var(--color-sombra);
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.nav .txt3 {
+    background: #24015f;
+    color: #ffffff;
+    width: 4.6875em;
+    margin: 0.625em;
+    padding: 0.625em;
+    border-radius: 5px;
+    box-shadow: var(--color-sombra);
+    align-content: flex-end;
+    display: grid;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.nav .txt4 {
+    background: #24015f;
+    color: #ffffff;
+    width: 5.5em;
+    margin: 0.625em;
+    padding: 0.625em;
+    border-radius: 5px;
+    box-shadow: var(--color-sombra);
+    display: grid;
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+
+
+/* CONTENEDOR */
+.content {
+    grid-area: content;
+    align-items: center;
+    margin: 1.25em;
+}
+
+.content img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: var(--color-sombra);
+}
+
+
+/* WIDGETS */
+.widgets {
+    grid-area: widgets;
+    width: auto;
+    margin: 1.25em;
+    display: grid;
+    align-content: space-between;
+}
+
+
+.widgets .cliente-1,
+.widgets .cliente-2,
+.widgets .cliente-3 {
+    background: #ffffff;
+    color: #333131;
+    margin: 0.625em;
+    padding: 0.625em;
+    border-radius: 5px;
+    box-shadow: var(--color-sombra);
+
+}
+
+.widgets .cliente-1 h2,
+.widgets .cliente-2 h2,
+.widgets .cliente-3 h2 {
+    color: #c4315e;
+}
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    grid-area: footer;
+    background: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0.625em;
+
+}
+
+.footer>p {
+    width: 25em;
+    border: #000000;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+
+@media screen and (max-width: 1100px) {
+    body {
+
+        font-size: 14px;
+    }
+
+
+    .contenedor {
+        grid-template-areas: "header"
+            "nav"
+            "content widgets"
+            "content widgets"
+            "footer";
+    }
+
+    .content img{
+        margin: auto;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+
+        font-size: 14px;
+    }
+
+
+    .contenedor {
+        grid-template-areas: "header"
+            "nav"
+            "content"
+            "content"
+            "widgets"
+            "footer";
+    }
+
+    .content img {
+        margin: 2em;
+    }
+
+}
+
