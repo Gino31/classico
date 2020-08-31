@@ -1,0 +1,54 @@
+        .contenedor .sociales{
+            align-content: flex-end;
+        }
+        
+        .caja .map {
+            width: 90%;
+            margin: 0px 20px;
+            text-align: center;
+            text-align: center;
+            display: block;
+            border-radius: 5px;
+            box-shadow: var(--color-sombra);
+            
+        }
+
+        .contenedor a {
+            margin: 1em;
+        }
+
+        /* .caja h3 {
+            margin: .25em;
+        } */
+
+        .cotizar {
+            background: rgba(0, 0, 0, 0.4);
+            color: #24015f;
+            box-shadow: var(--color-sombra);
+            border-radius: 5px;
+            width: 90%;
+            margin: 0px 20px;
+            padding: 20px;
+            align-self: center;
+            justify-self: center;
+            text-shadow: var(--color-sombra);
+
+        }
+
+        .cotizar h2 {
+            text-shadow: var(--color-sombra);
+        }
+
+        @media screen and (max-width: 415px) {
+    body {
+
+        font-size: 14px;
+        
+    }
+
+    .cotizar, .caja .map {
+        /* margin: auto; */
+        margin-top: 10px;
+    }
+}
+
