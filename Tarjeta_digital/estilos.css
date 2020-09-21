@@ -56,6 +56,7 @@
 .link{
     display: block;
     width: 90%;
+    max-width: 800px;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 20px;
@@ -82,6 +83,7 @@
 
 .fondo2 [class*="icon-"]::before{
     margin: 10px;
+        
 }
 
 .titulo_perfil{
@@ -93,6 +95,8 @@
 
 .texto{
     font-size: 20px;
+    width: 80%;
+    max-width: 500px;
     line-height: 35px;
     margin: 10px;
 }
